@@ -1,0 +1,24 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 130px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+body::before {
+  display: block;
+  content: '';
+  height: 40px;
+}
+
+.landingpage-image {
+  width: 100%;
+}
+
+@media only screen and (max-width: 960px) {
+  .landingpage-image {
+    display: none;
+  }
+}
