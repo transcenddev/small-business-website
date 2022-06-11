@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Codify</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark text-light fixed-top shadow-sm p-3 bg-body">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="bi bi-code-slash"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav m-auto">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" href="#course">Courses</a>
+          <a class="nav-link active" href="#article">Articles</a>
+          <a class="nav-link active" href="#newsletter">Newsletter</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section class="bg-white text-dark text-center text-lg-start p-5" id="landingpage">
+      <div class="container">
+        <div class="d-md-flex my-5">
+          <div class="m-auto">
+            <h1 class="w-100 fw-bold py-3">
+              Learn to code simply yet efficiently.
+            </h1>
+            <p class="lead">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor nostrum cumque porro qui eos quia, et harum voluptas debitis repellendus?
+            </p>
+            <button type="button" class="btn btn-primary btn-lg" data-bs-target="#join" data-bs-toggle="modal">Let's Codify</button>
+
+          </div>
+          <div class="landingpage-image my-5">
+            <img class="img-fluid w-100"  src="images/landingpage-image.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-dark text-light text-center text-md-start p-5" id="course">
+      <div class="container">
+        <div class="d-md-flex flex-column py-5">
+          <div>
+            <h1 class="fw-bold pb-3 pt-5">Courses</h1>
+          </div>
+          <div>
+            <p class="lead">
+              Premium courses to help you step up your front-end game in short order. While there are a ton of free resources out there, it can be hard to figure out which ones are good, which are bad, and in what order to follow them. Because of that, I’ve decided to start creating premium courses to help. They are deep dives into specific topics, helping you level up your game in as little time as possible. 
+            </p>
+            <button type="button" class="btn btn-link ps-0 pb-5 text-decoration-none">Learn More<i class="bi bi-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white text-dark text-center text-md-start p-5" id="article">
+      <div class="container">
+        <div class="d-flex flex-column py-5">
+          <div>
+            <h1 class="fw-bold pb-3 pt-5">Articles</h1>
+          </div>
+          <div>
+            <p class="lead">
+              I come across a lot of fun snippets of information to share with you.
+            </p>
+            <p class="lead">
+              I share these little bits of information — plus the occasional deep dive — through my articles. 
+            </p>
+            <button type="button" class="btn btn-link ps-0 pb-5 text-decoration-none">Learn More<i class="bi bi-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-primary text-white text-center text-md-start p-5" id="newsletter"> 
+      <div class="d-md-flex justify-content-betweeen align-items-center">
+        <div class="w-100">
+          <h2 class="fw-bold"> 
+            Never miss out on what I'm up to
+          </h2>
+          <p>Updates, little tips & tricks, and awesome resources delivery.</p>
+        </div>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Your email address" aria-label="Your email adress" aria-describedby="button-addon2">
+          <button class="btn btn-dark" type="button" id="button-addon2">Subscribe</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="text-center p-3">
+    <p class="fs-6">
+      &copy; 2022 Codify.
+    </p>
+  </footer>
+
+  <div class="modal" tabindex="-1" id="join">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">odify</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="lead">Fill out this form and we will get back to you</p>
+          <form>
+            <div class="mb-3">
+              <label for="first-name" class="col-form-label">First Name:</label>
+              <input type="text" class="form-control" id="first-name">
+            </div>
+            <div class="mb-3">
+              <label for="last-name" class="col-form-label">Last Name:</label>
+              <input type="text" class="form-control" id="last-name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="col-form-label">Email:</label>
+              <input type="text" class="form-control" id="email">
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="col-form-label">Phone:</label>
+              <input type="text" class="form-control" id="phone">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js">
+  </script>
+</body>
+</html>
