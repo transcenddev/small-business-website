@@ -1,147 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Required meta tags -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font link -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Mapbox -->
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/styles.css">
-  <title>Codify</title>
-</head>
-<body>
+  <title>Coffee Break</title>
+</head> 
+<body> 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-dark text-light fixed-top shadow-sm p-3 bg-body">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><i class="bi bi-code-slash"></i></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm p-0 bg-body">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./images/logo-coffee.svg" alt="" width="50" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav m-auto">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link active" href="#course">Courses</a>
-          <a class="nav-link active" href="#article">Articles</a>
-          <a class="nav-link active" href="#newsletter">Newsletter</a>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#menu">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#book-table"><i class="bi bi-arrow-right"></i> Book a table</a>
+          </li>
+
+        </ul> 
       </div>
     </div>
   </nav>
+  
   <main>
-    <section class="bg-white text-dark text-center text-lg-start p-5" id="landingpage">
+    <!-- Hero Section -->
+    <section class="bg-image text-white text-center text-md-start" style="background-image: url('./images/coffee-bg-1.png')" id="hero-section">
       <div class="container">
-        <div class="d-md-flex my-5">
-          <div class="m-auto">
-            <h1 class="w-100 fw-bold py-3">
-              Learn to code simply yet efficiently.
-            </h1>
-            <p class="lead">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor nostrum cumque porro qui eos quia, et harum voluptas debitis repellendus?
-            </p>
-            <button type="button" class="btn btn-primary btn-lg" data-bs-target="#join" data-bs-toggle="modal">Let's Codify</button>
+        <div class="d-flex flex-column justify-content-center vh-100">
+          <div class="mb-5">
+            <h1 class="fs-1 fw-bold">Let's have a coffee</h1>
+            <p class="lead">No matter what the season is — I'm going to warm you up.</p>
+          </div>
+          <div>
+            <button type="button" class="btn btn-light">
+              <a class="nav-link" href="#about">
+                About Us
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          </div>
-          <div class="landingpage-image my-5">
-            <img class="img-fluid w-100"  src="images/landingpage-image.png" alt="">
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="bg-dark text-light text-center text-md-start p-5" id="course">
+     <!-- About us Section -->
+     <section class="bg-white p-5 text-center" id="about">
       <div class="container">
-        <div class="d-md-flex flex-column py-5">
-          <div>
-            <h1 class="fw-bold pb-3 pt-5">Courses</h1>
-          </div>
-          <div>
-            <p class="lead">
-              Premium courses to help you step up your front-end game in short order. While there are a ton of free resources out there, it can be hard to figure out which ones are good, which are bad, and in what order to follow them. Because of that, I’ve decided to start creating premium courses to help. They are deep dives into specific topics, helping you level up your game in as little time as possible. 
+        <div class="d-flex justify-content-center align-items-center vh-100">
+          <div class="w-100">
+            <p class="lead fs-1 fw-bold">
+              This is a simple place to eat, drink, meet friends or new people, and get away from the struggles of everyday life. 
             </p>
-            <button type="button" class="btn btn-link ps-0 pb-5 text-decoration-none">Learn More<i class="bi bi-chevron-right"></i></button>
           </div>
         </div>
       </div>
     </section>
-    <section class="bg-white text-dark text-center text-md-start p-5" id="article">
+
+    <!-- Menu Section -->
+    <section id="menu" class="bg-white p-5 m-5 text-center text-md-start">
       <div class="container">
-        <div class="d-flex flex-column py-5">
-          <div>
-            <h1 class="fw-bold pb-3 pt-5">Articles</h1>
+        <div class="row align-items-center justify-content-between gy-5">
+          <div class="col-md">
+            <h2 class="fs-1 fw-bold">Menu</h2>
+            <p class="lead">
+              Every season will have a different variety of coffee from us. The temperature, flavor, and volume are beyond this world. Consider sipping our goddess coffee. We provide a full menu for eat-in or take-out. 
+            </p>
           </div>
-          <div>
-            <p class="lead">
-              I come across a lot of fun snippets of information to share with you.
-            </p>
-            <p class="lead">
-              I share these little bits of information — plus the occasional deep dive — through my articles. 
-            </p>
-            <button type="button" class="btn btn-link ps-0 pb-5 text-decoration-none">Learn More<i class="bi bi-chevron-right"></i></button>
+          <div class="col-md">
+            <!-- <img class="img-fluid w-50 float-md-end mx-auto" src="./images/menu.jpg" id="menu-image" alt=""> -->
+            
+            <div id="myCarousel" class="carousel slide" data-bs-ride="false">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="img-fluid" src="./images/menu/more-coffee.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./images/menu/coffee1.png" class="img-fluid d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <div class="shadow-sm">
+                      <h5 class="shadow-sm">Latte with expresso</h5>
+                      <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./images/menu/coffee2.png" class="img-fluid d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Hot coffee</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./images/menu/coffee3.png" class="img-fluid d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Hot coffee</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./images/menu/coffee4.png" class="img-fluid d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Hot coffee</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="bg-primary text-white text-center text-md-start p-5" id="newsletter"> 
-      <div class="d-md-flex justify-content-betweeen align-items-center">
-        <div class="w-100">
-          <h2 class="fw-bold"> 
-            Never miss out on what I'm up to
-          </h2>
-          <p>Updates, little tips & tricks, and awesome resources delivery.</p>
+
+    <!-- Book a Table -->
+    <section class="bg-white p-5 my-5 text-md-center fw-bold" id="book-table">
+      <div class="container">
+        <div>
+          <h2 class="fs-1 fw-bold">Book a Table</h2>
         </div>
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Your email address" aria-label="Your email adress" aria-describedby="button-addon2">
-          <button class="btn btn-dark" type="button" id="button-addon2">Subscribe</button>
+        <div>
+          <form class="text-sm-start">
+            <div class="mb-3">First Name</label>
+              <input type="text" class="form-control" placeholder="Your first name" aria-label="First Name">
+            </div>
+            <div class="mb-3">Last Name</label>
+              <input type="text" class="form-control" placeholder="Your last name" aria-label="Last Name">
+            </div>
+            <div class="mb-3">
+              <label for="InputEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" placeholder="Your email" id="InputEmail" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="InputMessage" class="form-label">Message</label>
+              <textarea class="form-control" placeholder="Message" aria-label="With textarea"></textarea>
+            </div>
+            <div class="mt-3">
+              <button type="submit" class="btn btn-dark"> Book a Table</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact us Section -->
+    <section id="contact">
+      <div id="map"></div>
+      <div class="container">
+        <div class="d-flex flex-column justify-content-center align-items-center p-5">
+          <div class="mb-3 text-center">
+            <h2 class="fw-bold">Contact Us</h2>
+          </div>
+          <div>
+            <p>
+              <i class="bi bi-shop"></i> <span>Timalan Balsahan, Naic, Cavite, Philippines</span>
+            </p>
+            <p>
+              <i class="bi bi-envelope"></i> <span>coffeebreak@gmail.com</span>
+            </p>
+            <p>
+              <i class="bi bi-telephone"></i> <span>+63-2-8123-4567</span>
+            </p>
+          </div>
         </div>
       </div>
     </section>
   </main>
-  <footer class="text-center p-3">
-    <p class="fs-6">
-      &copy; 2022 Codify.
-    </p>
-  </footer>
 
-  <div class="modal" tabindex="-1" id="join">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">odify</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p class="lead">Fill out this form and we will get back to you</p>
-          <form>
-            <div class="mb-3">
-              <label for="first-name" class="col-form-label">First Name:</label>
-              <input type="text" class="form-control" id="first-name">
-            </div>
-            <div class="mb-3">
-              <label for="last-name" class="col-form-label">Last Name:</label>
-              <input type="text" class="form-control" id="last-name">
-            </div>
-            <div class="mb-3">
-              <label for="email" class="col-form-label">Email:</label>
-              <input type="text" class="form-control" id="email">
-            </div>
-            <div class="mb-3">
-              <label for="phone" class="col-form-label">Phone:</label>
-              <input type="text" class="form-control" id="phone">
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Submit</button>
-        </div>
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <span class="mb-3 mb-md-0 text-muted">&copy; 2022 Coffee Break</span>
       </div>
-    </div>
-  </div>
   
-  <script 
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js">
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><i class="bi bi-twitter"></i></a></li>
+        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><i class="bi bi-instagram"></i></a></li>
+        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><i class="bi bi-facebook"></i></a></li>
+      </ul>
+    </footer>
+  </div>
+  </script>
+  <!-- Bootstrap Bundle with Popper-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+  <!-- cdn files -->
+  <!-- 1. Mapbox -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoicjNrYXNoaSIsImEiOiJjbDN0eDFrcWUwYmh1M2NvMmpnemQwamFtIn0.y8kgeTa7iIqyrsBWwsO6Sg';
+    const map = new mapboxgl.Map({
+      container: 'map', // container ID
+      style: 'mapbox://styles/mapbox/streets-v11', // style URL
+      center: [120.782481, 14.340075], // starting position [lng, lat]
+      zoom: 15 // starting zoom
+    });
   </script>
 </body>
 </html>
