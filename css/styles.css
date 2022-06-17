@@ -1,0 +1,23 @@
+
+/* make the scroll smoothly. */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
+body {
+  font-family: 'Inter', sans-serif
+}
+
+/* Hero-section background image */
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  min-width: 60vh;
+}
+
+/* Setting the size of the mapbox */
+#map {
+  width: 100%;
+  height: 60vh;
+}
